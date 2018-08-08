@@ -3,7 +3,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return render_template("index.html")
+    playrs=["ron", "ted"]
+    return render_template("index.html", fav_playrs=playrs)
+    
 
 if __name__ == '__main__':
    app.run(debug = True)
